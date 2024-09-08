@@ -27,8 +27,7 @@ dataset_mixer:
   africa-intelligence/yahma-alpaca-cleaned-zu: 1.0
   africa-intelligence/yahma-alpaca-cleaned-af: 1.0
 dataset_splits:
-- train_sft
-- test_sft
+- train
 preprocessing_num_workers: 12
 
 # SFT trainer config

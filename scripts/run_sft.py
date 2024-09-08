@@ -153,7 +153,13 @@ def main():
     )
 
     train_dataset = raw_datasets["train"]
-    eval_dataset = raw_datasets["test"]
+    if "test" in raw_datasets:
+        eval_dataset = raw_datasets["test"]
+    else:
+        print("No test split found. Creating a small evaluation set from the training data.")
+        train_test_split = raw_datasets["train"].train_test_split(test_size=0.1)
+        raw_datasets["train"] = train_test_split["train"]
+        eval_dataset = train_test_split["test"]
 
     with training_args.main_process_first(desc="Log a few random samples from the processed training set"):
         for index in random.sample(range(len(raw_datasets["train"])), 3):
