@@ -234,6 +234,9 @@ def main():
 
     logger.info("*** Training complete ***")
 
+    #sleep indefinitely to keep the container alive
+    time.sleep(100000000)
+
 
 if __name__ == "__main__":
     main()

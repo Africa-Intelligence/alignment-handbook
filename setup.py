@@ -51,7 +51,7 @@ _deps = [
     "flake8>=6.0.0",
     "hf-doc-builder>=0.4.0",
     "hf_transfer>=0.1.4",
-    "huggingface-hub>=0.19.2,<1.0",
+    "huggingface-hub>=0.19.2,<=0.24.7",
     "isort>=5.12.0",
     "ninja>=1.11.1",
     "numpy>=1.24.2",
